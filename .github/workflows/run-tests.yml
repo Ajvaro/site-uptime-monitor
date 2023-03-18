@@ -20,20 +20,26 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Copy .env file
-        run: cp .env.example .env
-      - name: Generate application key
-        run: php artisan key:generate
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick, fileinfo
           coverage: none
+
       - name: Install dependencies
         run: composer install
+
       - name: List Installed Dependencies
         run: composer show -D
+
+      - name: Copy .env file
+        run: cp .env.example .env
+
+      - name: Generate application key
+        run: php artisan key:generate
+
       - name: Run tests
         run: vendor/bin/pest
         env:
