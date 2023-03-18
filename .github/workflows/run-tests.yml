@@ -45,9 +45,6 @@ jobs:
       - name: Publish breeze assets
         run: php artisan breeze:install vue
 
-      - name: Run migrations
-        run: php artisan migrate
-
       - name: Run tests
         run: vendor/bin/pest
         env:
