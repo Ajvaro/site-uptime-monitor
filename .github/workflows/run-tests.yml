@@ -42,12 +42,6 @@ jobs:
       - name: Generate application key
         run: php artisan key:generate
 
-      - name: Publish breeze assets
-        run: php artisan breeze:install vue
-
-      - name: Composer dump autoload
-        run: composer dump-autoload
-
       - name: Run tests
         run: vendor/bin/pest
         env:
