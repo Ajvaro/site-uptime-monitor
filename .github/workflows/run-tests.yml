@@ -24,7 +24,6 @@ jobs:
         run: cp .env.example .env
       - name: Generate application key
         run: php artisan key:generate
-        if: !env('APP_KEY')
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
