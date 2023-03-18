@@ -42,7 +42,15 @@ jobs:
       - name: Generate application key
         run: php artisan key:generate
 
-      - name: Compile assets
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Build project
         run: npm run build
 
       - name: Run tests
