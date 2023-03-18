@@ -7,9 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class BaseModel
- * @package App\Models
  */
 abstract class BaseModel extends Model
 {
-  use HasFactory;
+    use HasFactory;
 }
