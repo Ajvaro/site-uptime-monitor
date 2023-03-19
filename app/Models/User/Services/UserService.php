@@ -15,9 +15,6 @@ class UserService
     {
     }
 
-    /**
-     * @return User
-     */
     public function create(array $data): User
     {
         $data = [
