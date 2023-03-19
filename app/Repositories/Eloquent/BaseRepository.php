@@ -7,6 +7,7 @@ use App\Repositories\Contracts\EloquentRepositoryContract;
 
 /**
  * Class BaseRepository
+ *
  * @template TEntity as object
  */
 abstract class BaseRepository implements EloquentRepositoryContract
@@ -36,27 +37,17 @@ abstract class BaseRepository implements EloquentRepositoryContract
         return $this->model::create($data);
     }
 
-    /**
-     * @param BaseModel $model
-     * @param array $data
-     * @return bool
-     */
     public function update(BaseModel $model, array $data): bool
     {
         return $this->model::update($data);
     }
 
-    /**
-     * @param BaseModel $model
-     * @return bool
-     */
     public function delete(BaseModel $model): bool
     {
         return $this->model::delete();
     }
 
     /**
-     * @param int $id
      * @return TEntity|null
      */
     public function find(int $id): ?object

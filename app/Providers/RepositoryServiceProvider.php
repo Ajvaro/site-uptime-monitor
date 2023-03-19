@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Repositories\Contracts\EloquentRepositoryContract;
-use App\Repositories\Eloquent\BaseRepository;
 use App\Repositories\Eloquent\User\UserRepository;
 use App\Repositories\Eloquent\User\UserRepositoryContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

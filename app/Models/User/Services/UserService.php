@@ -4,7 +4,6 @@ namespace App\Models\User\Services;
 
 use App\Models\User\User;
 use App\Repositories\Eloquent\User\UserRepository;
-use App\Repositories\Eloquent\User\UserRepositoryContract;
 use Illuminate\Support\Facades\Hash;
 
 /**
@@ -16,10 +15,6 @@ class UserService
     {
     }
 
-    /**
-     * @param array $data
-     * @return User
-     */
     public function create(array $data): User
     {
         $data = [
