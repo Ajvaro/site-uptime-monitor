@@ -10,7 +10,6 @@ use Illuminate\Validation\Rules\Password;
 
 /**
  * Class UserService
- * @package App\Models\User\Services
  */
 class UserService
 {
@@ -19,7 +18,6 @@ class UserService
     }
 
     /**
-     * @param array $data
      * @return User
      */
     public function create(array $data)

@@ -10,7 +10,6 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 
 /**
  * Class RepositoryServiceProvider
- * @package App\Providers
  */
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -19,7 +18,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(EloquentRepositoryContract::class,BaseRepository::class);
-        $this->app->bind(UserRepositoryContract::class,UserRepository::class);
+        $this->app->bind(EloquentRepositoryContract::class, BaseRepository::class);
+        $this->app->bind(UserRepositoryContract::class, UserRepository::class);
     }
 }
