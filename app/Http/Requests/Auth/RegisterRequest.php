@@ -8,7 +8,6 @@ use Illuminate\Validation\Rules\Password;
 
 /**
  * Class RegisterRequest
- * @package App\Http\Requests\Auth
  */
 class RegisterRequest extends FormRequest
 {
@@ -29,7 +28,7 @@ class RegisterRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:'. User::class,
+            'email' => 'required|string|email|max:255|unique:'.User::class,
             'password' => ['required', 'confirmed', Password::defaults()],
         ];
     }
