@@ -3,6 +3,7 @@
 namespace App\Models\User\Services;
 
 use App\Models\User\User;
+use App\Repositories\Eloquent\User\UserRepository;
 use App\Repositories\Eloquent\User\UserRepositoryContract;
 use Illuminate\Support\Facades\Hash;
 
@@ -11,10 +12,14 @@ use Illuminate\Support\Facades\Hash;
  */
 class UserService
 {
-    public function __construct(private readonly UserRepositoryContract $userRepository)
+    public function __construct(private readonly UserRepository $userRepository)
     {
     }
 
+    /**
+     * @param array $data
+     * @return User
+     */
     public function create(array $data): User
     {
         $data = [

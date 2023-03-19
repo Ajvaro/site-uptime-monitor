@@ -1,0 +1,13 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+parameters:
+    paths:
+        - app
+    level: 9
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    ignoreErrors:
+    excludePaths:
+    - app/Http/Requests/*
+    - app/Http/Controllers/Auth/*
+    - app/Http/Controllers/ProfileController.php

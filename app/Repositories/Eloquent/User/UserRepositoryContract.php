@@ -8,8 +8,9 @@ use Illuminate\Support\Collection;
 
 /**
  * Interface UserRepositoryContract
+ * @package App\Repositories\Eloquent\User
  */
-interface UserRepositoryContract extends EloquentRepositoryContract
+interface UserRepositoryContract
 {
     /**
      * @return Collection<User>
