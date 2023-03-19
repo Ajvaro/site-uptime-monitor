@@ -3,13 +3,12 @@
 namespace App\Repositories\Eloquent\User;
 
 use App\Models\User\User;
-use App\Repositories\Contracts\EloquentRepositoryContract;
 use App\Repositories\Eloquent\BaseRepository;
 use Illuminate\Support\Collection;
 
 /**
  * Class UserRepository
- * @package App\Repositories\Eloquent\User
+ *
  * @extends BaseRepository<User>
  */
 class UserRepository extends BaseRepository implements UserRepositoryContract
