@@ -27,7 +27,7 @@ abstract class BaseRepository implements EloquentRepositoryContract
         }
     }
 
-    abstract public function setModel();
+    abstract public function setModel(): void;
 
     /**
      * @param array $data

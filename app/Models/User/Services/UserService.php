@@ -5,8 +5,6 @@ namespace App\Models\User\Services;
 use App\Models\User\User;
 use App\Repositories\Eloquent\User\UserRepositoryContract;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rules\Password;
 
 /**
  * Class UserService
@@ -22,14 +20,8 @@ class UserService
      * @param array $data
      * @return User
      */
-    public function create(array $data)
+    public function create(array $data): User
     {
-        Validator::validate($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:'.User::class,
-            'password' => ['required', 'confirmed', Password::defaults()],
-        ]);
-
         $data = [
             'name' => $data['name'],
             'email' => $data['email'],
